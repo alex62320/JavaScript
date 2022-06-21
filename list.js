@@ -9,6 +9,16 @@ async function start() {
     }
 }
 start()
+// // corrigé
+function createdBreedList(breedList) {
+    document.getElementById("breed").innerHTML = `
+    <select onchange="loadByBreed(this.value)">
+        <option>Sélectionner une race de chien</option>
+        ${Object.keys(breedList).map(function (breed) {
+            return `<option>${breed}</option>`
+        }).join('')}</select>
+        `
+}
 
 async function doggo() {
     try {
@@ -21,22 +31,15 @@ async function doggo() {
     }
 }
 doggo()
-https://dog.ceo/api/breed/hound/images
-// // corrigé
-function createdBreedList(breedList) {
-    document.getElementById("breed").innerHTML = `
-    <select onchange="loadByBreed(this.value)">
-        <option>Sélectionner une race de chien</option>
-        ${Object.keys(breedList).map(function (breed) {
-            return `<option>${breed}</option>`
-        }).join('')}</select>
-        `
-}
 
+
+
+
+// https://dog.ceo/api/breed/hound/images
 function createdDoggoList(doggoList){
-    document.getElementById("mon-chien").innerHTML = `
+    document.getElementById("mon-chien").src= `
     ${Object.keys(doggoList).map(function (doggoImg) {
-        return `<img src="${doggoImg}" />`
+        return `<img src="${doggoImg.message}" />`
     }
          )}
     `

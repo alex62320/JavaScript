@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+  }
+  body{
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  
+  
+  #ul_breeds{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    width: 200px;
+    background-color: #f5f7f9;
+    position: absolute;
+  }
+  #ul_breeds li{
+    padding: 10px;
+  }
+  #ul_breeds li:hover{
+    padding: 10px;
+    background-color: #d5d7d9;
+  }
+  
+  
+  
+  /*
+    part-3 styles
+  */
+  #img_container{
+    padding-left: 200px;
+    width: 100%;
+    min-width: 100px;
+    text-align: center;
+  }
+  
+  .gridItem{
+    width: 200px;
+    height: 200px;
+    margin-left: 1%;
+    margin-top: 1%;
+    display: inline-block;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  .gridItem:hover{
+    transform: scale(2, 2);
+    object-fit: contain;
+  }
